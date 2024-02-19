@@ -1,0 +1,89 @@
+/* Full-width inputs */
+  input[type=text],
+  input[type=password] {
+      width: 100%;
+      padding: 8px 16px 8px 16px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      height: 40px;
+      text-align: center;
+  }
+
+  i {
+      margin-top: 15px;
+  }
+
+  .container i {
+      position: absolute;
+  }
+
+  /* Set a style for all buttons */
+  button {
+      background-color: #00AEEF;
+      color: white;
+      padding: 14px 20px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 20px;
+  }
+
+  /* Add a hover effect for buttons */
+  button:hover {
+      opacity: 0.8;
+  }
+
+  .header h1 {
+      text-align: center;
+      padding-left: 120px;
+      padding-top: 30px;
+      color: #003665;
+      size: 50px;
+      height: 60px;
+      font-size: 50px;
+      margin-bottom: 100px;
+      margin-top: 30px;
+  }
+
+  /* Center the avatar image inside this container */
+  .header img {
+    float: right;
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Add padding to containers */
+  .container {
+      padding: 16px;
+      text-align: center;
+  }
+
+  /* The "Forgot password" text */
+  span.psw {
+      padding-top: 30px;
+      color: #00AEEF;
+      cursor: pointer;
+  }
+
+  /* Set style for login form */
+  .formContainer {
+      width: 500px;
+      margin: auto;
+  }
+
+  /* Set style for warning message */
+  .warningMessage {
+      text-align: center;
+      color: #003665;
+      font-size: 16px;
+  }
+
+  /* Set style footer */
+  .footerContainer {
+      margin-top: 150px;
+  }
