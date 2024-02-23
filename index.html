@@ -8,47 +8,88 @@
   <meta http-equiv="Access-Control-Allow-Origin" content="*" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     type="text/css" data-preload="true">
-    <!-- <link href="SampleOne.css" rel="stylesheet"> -->
+  <!-- <link href="SampleOne.css" rel="stylesheet"> -->
   <title>ePIC</title>
   <style>
     @font-face {
       font-family: 'MuseoCyrlFont';
-      src: url('https://DimitrovYordan.github.io/statichtml/Museo_Cyrl_500.ttf'),
-        /* Safari, Android, iOS */
+      src: url('https://DimitrovYordan.github.io/statichtml/Museo_Cyrl_500.ttf')
+    }
+
+    /* Add padding to container */
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'MuseoCyrlFont';
+      text-align: center;
+      color: #003665;
+      size: 50px;
+      height: 60px;
+      font-size: 50px;
+      position: relative;
+      top: -100px;
+    }
+
+    .sub-header {
+      margin-top: -80px;
+      width: 100%;
+      display: block;
+    }
+
+    /* Center the avatar image inside this container */
+    .header img {
+      float: right;
+    }
+
+    .clearfix {
+      display: block;
+    }
+
+    .clearfix:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+
+    /* Set a style for all inputs */
+    ::placeholder {
+      color: #003665;
     }
 
     input[type=text],
     input[type=password] {
+      font-family: 'MuseoCyrlFont';
+      font-size: 15px;
+      font-weight: bold;
       width: 100%;
       padding: 8px 16px 8px 16px;
       margin-top: 10px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       display: inline-block;
-      border: 1px solid #ccc;
+      border: 1px solid #003665;
       box-sizing: border-box;
-      height: 40px;
       text-align: center;
-    }
-
-    i {
-      margin-top: 15px;
-    }
-
-    .container i {
-      position: absolute;
     }
 
     /* Set a style for all buttons */
     button {
       background-color: #00AEEF;
-      color: white;
-      padding: 14px 20px;
+      font-family: 'MuseoCyrlFont';
+      font-size: 20px;
+      color: #fff;
       margin-bottom: 30px;
       margin-top: 30px;
       border: none;
       cursor: pointer;
       width: 100%;
       border-radius: 20px;
+      height: 35px;
+      line-height: 35px;
     }
 
     /* Add a hover effect for buttons */
@@ -56,54 +97,28 @@
       opacity: 0.8;
     }
 
-    .header h1 {
-      text-align: center;
-      padding-left: 120px;
-      padding-top: 30px;
-      color: #003665;
-      size: 50px;
-      height: 60px;
-      font-size: 50px;
-      margin-bottom: 100px;
-      margin-top: 30px;
-    }
-
-    /* Center the avatar image inside this container */
-    .header img {
-      float: right;
-      width: 100px;
-      height: 100px;
-    }
-
-    /* Add padding to containers */
-    .container {
-      padding: 16px;
-      text-align: center;
-    }
-
     /* The "Forgot password" text */
-    span.forgotenPass {
-      padding-top: 30px;
+    .forgoten-pass-container {
+      text-align: center;
+    }
+
+    span.forgoten-pass {
+      font-weight: bold;
       color: #00AEEF;
       cursor: pointer;
     }
 
-    /* Set style for login form */
-    .formContainer {
-      width: 500px;
-      margin: auto;
+    /* Set style footer */
+    .footer-container {
+      margin-top: 80px;
     }
 
     /* Set style for warning message */
-    .warningMessage {
+    .warning-message {
+      font-family: 'MuseoCyrlFont';
       text-align: center;
       color: #003665;
       font-size: 16px;
-    }
-
-    /* Set style footer */
-    .footerContainer {
-      margin-top: 150px;
     }
   </style>
 </head>
@@ -115,66 +130,34 @@
     <div class="header">
       <img src="https://DimitrovYordan.github.io/statichtml/KBC_PensionInsurance_BG_v.png" alt="Company Logo"
         class="CompanyLogo">
-
+      <div class="clearfix"></div>
       <h1>Добре дошли</h1>
+    </div>
+    <div class="sub-header">
     </div>
     <div id="api" style="display: none;"></div>
 
-    <form class="formContainer" method="post">
+    <div class="form-container">
 
-      <div class="container">
+      <button class="enterKBC" type="submit">Вход за служители на KBC</button>
 
-        <button class="enterKBC" type="submit">Вход за служители на KBC</button>
+      <input class="username-field" type="text" placeholder="Имейл за вход">
 
-        <!-- <i><svg width="48" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M2.5 13.08V18.27C2.5 19.22 3.27 19.99 4.22 19.99H4.23H19.77C20.72 20 21.49 19.23 21.5 18.28V18.27V13.08"
-              stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" />
-            <path
-              d="M21.5 8.76997V6.21997C21.5 5.26997 20.73 4.49997 19.78 4.49997H19.77H4.23C3.28 4.48997 2.51 5.25997 2.5 6.20997V6.21997V8.81997L12 13.95L21.5 8.76997Z"
-              stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </i> -->
+      <input class="password-field" type="password" placeholder="Парола">
 
-
-        <input class="enterName" type="text" placeholder="Имейл за вход" name="uname" required>
-
-        <!-- <i><svg width="48" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_894_18)">
-              <path
-                d="M12.76 20.53H35.23C37 20.53 38.44 21.97 38.44 23.74V39.79C38.44 41.56 37 43 35.23 43H12.76C10.99 43 9.55 41.56 9.55 39.79V23.74C9.55 21.97 10.99 20.53 12.76 20.53Z"
-                stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M24 33.37C25.7728 33.37 27.21 31.9328 27.21 30.16C27.21 28.3872 25.7728 26.95 24 26.95C22.2272 26.95 20.79 28.3872 20.79 30.16C20.79 31.9328 22.2272 33.37 24 33.37Z"
-                stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M24 33.37V36.58" stroke="black" stroke-width="1.6" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path
-                d="M31.68 20.53V12.64C31.73 8.47001 28.39 5.05 24.22 5C24.21 5 24.21 5 24.2 5H24C19.83 4.95 16.41 8.29 16.36 12.46C16.36 12.47 16.36 12.47 16.36 12.48V20.28"
-                stroke="black" stroke-width="1.6" stroke-linejoin="round" />
-            </g>
-            <defs>
-              <clipPath id="clip0_894_18">
-                <rect width="48" height="48" fill="white" />
-              </clipPath>
-            </defs>
-          </svg></i> -->
-        <input class="enterPassword" type="password" placeholder="Парола" name="psw" required>
-
-
-        <div class="container">
-          <span class="forgotenPass">Забравена парола?</span>
-        </div>
-
-        <button class="continue" type="submit">Продължете</button>
+      <div class="forgoten-pass-container">
+        <span class="forgoten-pass">Забравена парола?</span>
       </div>
+
+      <button class="continue" type="submit">Продължете</button>
+    </div>
 
     </form>
 
   </div>
 
-  <footer class="footerContainer">
-    <div class="warningMessage">
+  <footer class="footer-container">
+    <div class="warning-message">
       <p>Системата е предназначена само за упълномощени потребители. Използването й се наблюдава.<br>
         Потребителите на системата се съгласяват с наблюдението и са информирани, че ако бъде установена потенциална
         криминална дейност,<br>
