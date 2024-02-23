@@ -18,7 +18,7 @@
 
     /* Add padding to container */
     .form-container {
-      max-width: 500px;
+      max-width: 450px;
       margin: 0 auto;
     }
 
@@ -80,7 +80,7 @@
     button {
       background-color: #00AEEF;
       font-family: 'MuseoCyrlFont';
-      font-size: 20px;
+      font-size: 14pt;
       color: #fff;
       margin-bottom: 30px;
       margin-top: 30px;
@@ -139,7 +139,7 @@
 
     <div class="form-container">
 
-      <button class="enterKBC" type="submit">Вход за служители на KBC</button>
+      <button id="kbc_employee_btn" class="enterKBC" type="submit">Вход за служители на KBC</button>
 
       <input class="username-field" type="text" placeholder="Имейл за вход">
 
@@ -166,6 +166,19 @@
     </div>
   </footer>
 
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+      $(document).ready(function(){
+        var $kbcBtnFake = $('#kbc_employee_btn');
+        var $kbcBtnReal = $('#PICopenid');
+
+        if($kbcBtnReal.length){
+          $kbcBtnFake.on('click', function(ev){
+            kbcBtnReal.click();
+          });
+        }
+      });
+  </script>
 </body>
 
 </html>
