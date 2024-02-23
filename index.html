@@ -139,17 +139,17 @@
 
     <div class="form-container">
 
-      <button id="kbc_employee_btn" class="enterKBC" type="submit">Вход за служители на KBC</button>
+      <button id="fake-kbc_employee_btn" class="enterKBC" type="submit">Вход за служители на KBC</button>
 
-      <input class="username-field" type="text" placeholder="Имейл за вход">
+      <input id="fake-username" class="username-field" type="text" placeholder="Имейл за вход">
 
-      <input class="password-field" type="password" placeholder="Парола">
+      <input id="fake-password" class="password-field" type="password" placeholder="Парола">
 
       <div class="forgoten-pass-container">
-        <span class="forgoten-pass">Забравена парола?</span>
+        <span id="fake-forgot-password" class="forgoten-pass">Забравена парола?</span>
       </div>
 
-      <button class="continue" type="submit">Продължете</button>
+      <button id="fake-submit-btn" class="continue" type="submit">Продължете</button>
     </div>
 
     </form>
@@ -169,14 +169,32 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script type="text/javascript">
       $(document).ready(function(){
-        var $kbcBtnFake = $('#kbc_employee_btn');
-        var $kbcBtnReal = $('#PICopenid');
+        var $kbcBtnFake = $('#fake-kbc_employee_btn'),
+            $kbcBtnReal = $('#PICopenid'),
+            $usernameFake = $('#fake-username'),
+            $usernameReal = $('#email'),
+            $passwordFake = $('#fake-password'),
+            $passwordReal = $('#password'),
+            $submitBtnFake = $('#fake-submit-btn'),
+            $submitBtnReal = $('#next'),
+            $forgotPasswordFake = $('#fake-forgot-password'),
+            $forgotPasswordReal = $('#forgotPassword');
 
         if($kbcBtnReal.length){
           $kbcBtnFake.on('click', function(ev){
             $kbcBtnReal.click();
           });
         }
+
+        $submitBtnFake.on('click', function(ev){
+          $usernameReal.val($usernameFake.val());
+          $passwordReal.val($passwordFake.val());
+
+          $submitBtnReal.click();
+        });
+
+        $forgotPasswordReal.val($forgotPasswordFake.val());
+
       });
   </script>
 </body>
