@@ -8,8 +8,15 @@
   <meta http-equiv="Access-Control-Allow-Origin" content="*" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     type="text/css" data-preload="true">
+    <!-- <link href="SampleOne.css" rel="stylesheet"> -->
   <title>ePIC</title>
   <style>
+    @font-face {
+      font-family: 'MuseoCyrlFont';
+      src: url('https://DimitrovYordan.github.io/statichtml/Museo_Cyrl_500.ttf'),
+        /* Safari, Android, iOS */
+    }
+
     input[type=text],
     input[type=password] {
       width: 100%;
@@ -62,7 +69,7 @@
     }
 
     /* Center the avatar image inside this container */
-    .header svg {
+    .header img {
       float: right;
       width: 100px;
       height: 100px;
@@ -75,7 +82,7 @@
     }
 
     /* The "Forgot password" text */
-    span.psw {
+    span.forgotenPass {
       padding-top: 30px;
       color: #00AEEF;
       cursor: pointer;
@@ -106,8 +113,9 @@
   <div class="wrapper">
 
     <div class="header">
-      <img src="https://DimitrovYordan.github.io/statichtml/KBC_PensionInsurance_BG_v.png" alt="Company Logo" class="CompanyLogo">
-      
+      <img src="https://DimitrovYordan.github.io/statichtml/KBC_PensionInsurance_BG_v.png" alt="Company Logo"
+        class="CompanyLogo">
+
       <h1>Добре дошли</h1>
     </div>
     <div id="api" style="display: none;"></div>
@@ -129,7 +137,7 @@
         </i> -->
 
 
-        <input class="name" type="text" placeholder="Имейл за вход" name="uname" required>
+        <input class="enterName" type="text" placeholder="Имейл за вход" name="uname" required>
 
         <!-- <i><svg width="48" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_894_18)">
@@ -151,7 +159,7 @@
               </clipPath>
             </defs>
           </svg></i> -->
-        <input type="password" placeholder="Парола" name="psw" required>
+        <input class="enterPassword" type="password" placeholder="Парола" name="psw" required>
 
 
         <div class="container">
