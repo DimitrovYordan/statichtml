@@ -189,6 +189,7 @@
         // $forgotPasswordFake.val($forgotPasswordReal.val());
 
         $forgotPasswordFake.on('click', function(ev){
+          console.log('forgot password');
           $forgotPasswordReal.trigger('click');
         });
 
