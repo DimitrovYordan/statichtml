@@ -139,7 +139,7 @@
 
     <div class="form-container">
 
-      <button id="kbc_employee_btn" class="enterKBC" type="submit">Вход за служители на KBC</button>
+      <button class="enterKBC" type="submit">Вход за служители на KBC</button>
 
       <input class="username-field" type="text" placeholder="Имейл за вход">
 
@@ -166,19 +166,6 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-      $(document).ready(function(){
-        var $kbcBtnFake = $('#kbc_employee_btn');
-        var $kbcBtnReal = $('#PICopenid');
-
-        if($kbcBtnReal.length){
-          $kbcBtnFake.on('click', function(ev){
-            $kbcBtnReal.click();
-          });
-        }
-      });
-  </script>
 </body>
 
 </html>
