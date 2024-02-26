@@ -193,10 +193,12 @@
           $submitBtnReal.click();
         });
 
-        $forgotPasswordFake.val($forgotPasswordReal.val());
-
+        $forgotPasswordFake.on('click', function(ev){
+          $forgotPasswordFake.val($forgotPasswordReal.val())
+        })
       });
   </script>
 </body>
 
 </html>
+<!-- $forgotPasswordFake.val($forgotPasswordReal.val()); -->
