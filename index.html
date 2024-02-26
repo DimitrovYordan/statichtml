@@ -191,7 +191,7 @@
         console.log($forgotPasswordFake);
         $forgotPasswordFake.on('click', function(ev){
           console.log('forgot password');
-          $forgotPasswordReal.trigger('click');
+          $forgotPasswordReal[0].click();
         });
 
         $submitBtnFake.on('click', function(ev){
