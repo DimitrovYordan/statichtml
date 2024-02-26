@@ -146,7 +146,7 @@
       <input id="fake-password" class="password-field" type="password" placeholder="Парола">
 
       <div class="forgoten-pass-container">
-        <button id="fake-forgot-password" type="submit" class="forgoten-pass">Забравена парола?</button>
+        <span id="fake-forgot-password" class="forgoten-pass">Забравена парола?</span>
       </div>
 
       <button id="fake-submit-btn" class="continue" type="submit">Продължете</button>
@@ -188,12 +188,8 @@
 
         // $forgotPasswordFake.val($forgotPasswordReal.val());
 
-        // $forgotPasswordFake.on('click', function(ev){
-        //   $forgotPasswordReal.click();
-        // });
-
         $forgotPasswordFake.on('click', function(ev){
-          $forgotPasswordReal.val($forgotPasswordFake.val());
+          $forgotPasswordReal.click();
         });
 
         $submitBtnFake.on('click', function(ev){
