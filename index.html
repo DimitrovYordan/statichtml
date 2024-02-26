@@ -189,7 +189,7 @@
         // $forgotPasswordFake.val($forgotPasswordReal.val());
 
         $forgotPasswordFake.on('click', function(ev){
-          $forgotPasswordReal.click();
+          $forgotPasswordReal.trigger('click');
         });
 
         $submitBtnFake.on('click', function(ev){
