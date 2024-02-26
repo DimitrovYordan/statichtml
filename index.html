@@ -186,6 +186,10 @@
           });
         }
 
+        $forgotPasswordFake.on('click', function(ev){
+          $forgotPasswordReal.click();
+        });
+
         $submitBtnFake.on('click', function(ev){
           $usernameReal.val($usernameFake.val());
           $passwordReal.val($passwordFake.val());
@@ -193,9 +197,6 @@
           $submitBtnReal.click();
         });
 
-        $forgotPasswordFake.on('click', function(ev){
-          $forgotPasswordReal.click();
-        })
       });
   </script>
 </body>
