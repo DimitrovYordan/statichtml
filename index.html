@@ -185,12 +185,16 @@
             $kbcBtnReal.click();
           });
         }
-        
-        $forgotPasswordFake.val($forgotPasswordReal.val());
+
+        // $forgotPasswordFake.val($forgotPasswordReal.val());
 
         // $forgotPasswordFake.on('click', function(ev){
         //   $forgotPasswordReal.click();
         // });
+
+        $forgotPasswordFake.on('click', function(ev){
+          $forgotPasswordReal.val($forgotPasswordFake.val());
+        });
 
         $submitBtnFake.on('click', function(ev){
           $usernameReal.val($usernameFake.val());
