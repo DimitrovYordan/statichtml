@@ -274,7 +274,6 @@
         $forgotPasswordReal = $('#forgotPassword'),
         $emailError = $('#email-error-message'),
         $passwordError = $('#password-error-message'),
-        $eyeIcon = $('#hide-input-icon'),
         $hideEyeIcon = $('#hide-input-icon'),
         $showEyeIcon = $('#show-input-icon'),
         emailReg = new RegExp(/^[A-Za-z\._0-9]{2,}[@][A-Za-z]{2,}[\.][a-z]{2,4}$/);
@@ -307,30 +306,29 @@
         }
       });
 
-      $passwordFake.on('change', function () {
+      $passwordFake.on('keyup', function () {
         var enterVal = $passwordFake.val();
-        var icon = $eyeIcon.val();
         if (enterVal === '') {
+          $passwordFake.attr("type", "password");
           $passwordError.text('Попълнете полето, за да продължите');
           $hideEyeIcon.css('display','none');
-        } else if (enterVal !== $usernameFake.val()) {
-          $passwordError.text('Имейлът за вход или паролата са невалидни');
-          $hideEyeIcon.css('display','block');
+          $showEyeIcon.css('display','none');
         } else {
-          $passwordError.text('');
-          $hideEyeIcon.css('display','none');
+          console.log('delete 2');
+          $hideEyeIcon.css('display','block');
         }
       });
+      
+      $hideEyeIcon.on("click", function () {
+          $passwordFake.attr("type", "text");
+          $hideEyeIcon.css('display', 'none');
+          $showEyeIcon.css('display', 'block');
+      });
 
-      $eyeIcon.on("click", function () {
-        var icon = $($passwordFake);
-        if (icon.attr("type") == "password") {
-          console.log('if');
-          icon.attr("type", "text");
-        } else {
-          console.log('else');
-          icon.attr("type", "password");
-        }
+      $showEyeIcon.on("click", function () {
+        $passwordFake.attr("type", "password");
+        $hideEyeIcon.css('display', 'block');
+        $showEyeIcon.css('display', 'none');
       });
 
     });
