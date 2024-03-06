@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'MuseoCyrlFont';
+  src: url('https://DimitrovYordan.github.io/statichtml/Museo_Cyrl_500.ttf')
+}
+
+#wrapper {
+  min-width: 340px;
+}
+
+/* Add padding to container */
+.form-container {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'MuseoCyrlFont';
+  text-align: center;
+  color: #003665;
+  size: 50px;
+  height: 60px;
+  font-size: 50px;
+  position: relative;
+  top: -100px;
+}
+
+.header {
+  margin-bottom: -70px;
+}
+
+/* Center the avatar image inside this container */
+.header .company-logo {
+  float: right;
+}
+
+.input-group-container {
+  position: relative;
+}
+
+.input-group-container .input-group-icon {
+  position: absolute;
+  margin-top: 18px;
+  margin-left: 10px;
+  font-size: 5px;
+  filter: brightness(0) saturate(100%) invert(14%) sepia(35%) saturate(4233%) hue-rotate(192deg) brightness(98%) contrast(100%);
+}
+
+.input-group-container #hide-input-icon,
+.input-group-container #show-input-icon {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  height: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.header a {
+  margin-top: 45px;
+  margin-left: 20px;
+  font-size: 30px;
+  float: left;
+  font-family: 'Calibri';
+  font-weight: normal;
+}
+
+.clearfix {
+  display: block;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+input[type=text],
+input[type=password] {
+  font-family: 'MuseoCyrlFont';
+  font-size: 15px;
+  width: 100%;
+  padding: 8px 16px 8px 16px;
+  margin-top: 15px;
+  display: inline-block;
+  border: 1px solid #00AEEF;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+input[type=text]::placeholder,
+input[type=password]::placeholder {
+  color: #003665;
+}
+
+input[type=text]:active,
+input[type=text]:focus,
+input[type=password]:active,
+input[type=password]:focus {
+  outline: none;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+p {
+  color: #D10057;
+  text-align: center;
+  margin: 10px 0;
+  font-family: 'MuseoCyrlFont';
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #00AEEF;
+  font-family: 'MuseoCyrlFont';
+  font-size: 14pt;
+  color: #fff;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 20px;
+  height: 35px;
+  line-height: 35px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active,
+button:focus {
+  outline: none;
+}
+
+a {
+  font-weight: bold;
+  color: #00AEEF;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:active,
+a:focus {
+  outline: none;
+}
+
+/* The "Forgot password" text */
+.forgoten-pass-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Set style footer */
+.footer-container {
+  margin-top: 80px;
+}
+
+/* Set style for warning message */
+.warning-message p {
+  font-family: 'MuseoCyrlFont';
+  text-align: center;
+  color: #003665;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+
+  .form-container button:first-of-type {
+    margin-top: 0;
+  }
+
+  .footer-container {
+    margin-top: 0;
+  }
+}
