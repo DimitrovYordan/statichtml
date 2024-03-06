@@ -103,6 +103,7 @@ $(document).ready(function () {
                 console.log(pel);
                 var text = $(pel).text();
                 console.log(text);
+                console.log('тук съм');
             });
         });
     }
