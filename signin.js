@@ -30,7 +30,7 @@ $(document).ready(function () {
         $usernameReal.val(unFake);
         $passwordReal.val(pwdFake);
 
-        $submitBtnReal.click();
+        $('#next').click();
     }
 
     $(window).on('keypress', function (ev) {
