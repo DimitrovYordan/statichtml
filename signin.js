@@ -6,7 +6,7 @@ $(document).ready(function () {
         $passwordFake = $('#fake-password'),
         $passwordReal = $('#password'),
         $submitBtnFake = $('#fake-submit-btn'),
-        $errors = $('.error'),
+        $errors = $('.error pageLevel'),
         $forgotPasswordFake = $('#fake-forgot-password'),
         $forgotPasswordReal = $('#forgotPassword'),
         $emailError = $('#email-error-message'),
@@ -95,10 +95,9 @@ $(document).ready(function () {
 
     function findErrors() {
         $errors.each(function (ind, el) {
-            console.log(ind);
-            console.log(el);
-
-            $($errors).on('DOMSubtreeModified', function (pind, pel) {
+            $(el).on('DOMSubtreeModified', function (pind, pel) {
+                console.log(pind);
+                console.log(pel);
                 var text = $(pel).text();
                 console.log(text);
             });
