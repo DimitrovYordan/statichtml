@@ -95,11 +95,9 @@ $(document).ready(function () {
 
     function findErrors() {
         $errors.each(function (ind, el) {
-            console.log(ind);
-            console.log(el);
             $(el).each(el, function (pind, pel) {
-                el.css('display', 'none');
-                pel.css('display', 'none');
+                el.css('aria-hidden', false);
+                pel.css('aria-hidden', false);
                 console.log(ind);
                 console.log(el);
                 console.log(pind);
