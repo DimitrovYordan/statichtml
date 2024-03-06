@@ -6,7 +6,7 @@ $(document).ready(function () {
         $passwordFake = $('#fake-password'),
         $passwordReal = $('#password'),
         $submitBtnFake = $('#fake-submit-btn'),
-        $errors = $('.error pageLevel'),
+        $errors = $('.error'),
         $forgotPasswordFake = $('#fake-forgot-password'),
         $forgotPasswordReal = $('#forgotPassword'),
         $emailError = $('#email-error-message'),
