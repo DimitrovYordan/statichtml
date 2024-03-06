@@ -285,6 +285,8 @@
       });
 
       $submitBtnFake.on('click', function (ev) {
+        $("input").removeAttr("pattern");
+
         var unFake = $usernameFake.val();
         var pwdFake = $passwordFake.val();
        
