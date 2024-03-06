@@ -92,9 +92,11 @@ $(document).ready(function () {
     }
 
     function findErrors() {
-        $errors.each(function (el, ind) {
-            console.log(el);
-            console.log(ind);
+        $errors.each(function (ind, el) {
+            $(el).find('p').each(function (pind, pel) {
+                var text = $(pel).text(); 
+                console.log(text);
+            });
         });
     }
 
