@@ -280,6 +280,20 @@
         });
       }
 
+      $('fake-submit-btn').keydown(function (ev) {
+        if (ev.keyCode == 13) {
+          $("input").removeAttr("pattern");
+
+          var unFake = $usernameFake.val();
+          var pwdFake = $passwordFake.val();
+
+          $usernameReal.val(unFake);
+          $passwordReal.val(pwdFake);
+          
+          $submitBtnReal.click();
+        }
+      });
+
       $forgotPasswordFake.on('click', function (ev) {
         $forgotPasswordReal[0].click();
       });
@@ -289,16 +303,16 @@
 
         var unFake = $usernameFake.val();
         var pwdFake = $passwordFake.val();
-       
+
         console.log(unFake);
         console.log(pwdFake);
- 
+
         $usernameReal.val(unFake);
         $passwordReal.val(pwdFake);
 
         console.log($usernameReal.val());
         console.log($passwordReal.val());
- 
+
         $submitBtnReal.click();
       });
 
@@ -330,18 +344,18 @@
         if (enterVal === '') {
           $passwordFake.attr("type", "password");
           $passwordError.text('Попълнете полето, за да продължите');
-          $hideEyeIcon.css('display','none');
-          $showEyeIcon.css('display','none');
+          $hideEyeIcon.css('display', 'none');
+          $showEyeIcon.css('display', 'none');
         } else {
-          $hideEyeIcon.css('display','block');
+          $hideEyeIcon.css('display', 'block');
           $passwordError.text('');
         }
       });
-      
+
       $hideEyeIcon.on("click", function () {
-          $passwordFake.attr("type", "text");
-          $hideEyeIcon.css('display', 'none');
-          $showEyeIcon.css('display', 'block');
+        $passwordFake.attr("type", "text");
+        $hideEyeIcon.css('display', 'none');
+        $showEyeIcon.css('display', 'block');
       });
 
       $showEyeIcon.on("click", function () {
