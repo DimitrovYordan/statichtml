@@ -21,6 +21,8 @@ $(document).ready(function () {
             }
         ];
 
+    findErrors();
+
     if ($kbcBtnReal.length) {
         $kbcBtnFake.on('click', function () {
             $kbcBtnReal.click();
