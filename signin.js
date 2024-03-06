@@ -95,9 +95,9 @@ $(document).ready(function () {
 
     function findErrors() {
         $errors.each(function (ind, el) {
-            $(el).each(el, function (pind, pel) {
-                el.css('aria-hidden', false);
-                pel.css('aria-hidden', false);
+            $(el).each('DOMSubtreeModified', function (pind, pel) {
+                el.removeAttr("aria-hidden");
+                ind.removeAttr("aria-hidden");
                 console.log(ind);
                 console.log(el);
                 console.log(pind);
