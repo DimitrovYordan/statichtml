@@ -29,12 +29,14 @@ $(document).ready(function () {
 
     $(window).on('keypress', function (ev) {
         if (ev.keyCode === 13 || ev.keyCode === 10) {
+            console.log('Enter key button');
             findErrors();
             submitForm();
         }
     });
 
     $submitBtnFake.on('click', function () {
+        console.log('Submit button');
         findErrors();
         submitForm();
     });
@@ -92,12 +94,12 @@ $(document).ready(function () {
     }
 
     function findErrors() {
-
-        $('.error pageLevel').on('DOMSubtreeModified', function (pind, pel) {
-            var text = $(pel).text();
-            console.log(text);
+        $errors.each(function (ind, el) {
+            $('.error pageLevel').on('DOMSubtreeModified', function (pind, pel) {
+                var text = $(pel).text();
+                console.log(text);
+            });
         });
-
     }
 
 });
