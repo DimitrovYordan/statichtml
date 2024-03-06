@@ -95,7 +95,7 @@ $(document).ready(function () {
 
     function findErrors() {
         $errors.each(function (ind, el) {
-            $('.error pageLevel').on('DOMSubtreeModified', function (pind, pel) {
+            $($errors).on('DOMSubtreeModified', function (pind, pel) {
                 var text = $(pel).text();
                 console.log(text);
             });
