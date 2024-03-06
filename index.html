@@ -287,9 +287,15 @@
           var unFake = $usernameFake.val();
           var pwdFake = $passwordFake.val();
 
+          console.log(unFake);
+          console.log(pwdFake);
+
           $usernameReal.val(unFake);
           $passwordReal.val(pwdFake);
-          
+
+          console.log($usernameReal.val());
+          console.log($passwordReal.val());
+
           $submitBtnReal.click();
         }
       });
