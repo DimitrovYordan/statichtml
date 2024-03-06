@@ -285,13 +285,29 @@
       });
 
       $submitBtnFake.on('click', function (ev) {
-        $usernameReal.val($usernameFake.val());
-        $passwordReal.val($passwordFake.val());
-
-        console.log($passwordFake.val());
-
+        var unFake = $usernameFake.val();
+        var pwdFake = $passwordFake.val();
+       
+        console.log(unFake);
+        console.log(pwdFake);
+ 
+        $usernameReal.val(unFake);
+        $passwordReal.val(pwdFake);
+ 
         $submitBtnReal.click();
       });
+
+      // $submitBtnFake.on('click', function (ev) {
+      //   $usernameReal.val($usernameFake.val());
+      //   $passwordReal.val($passwordFake.val());
+
+      //   console.log($passwordFake.val());
+      //   console.log($passwordReal.val());
+      //   console.log($usernameReal.val());
+      //   console.log($usernameFake.val());
+
+      //   $submitBtnReal.click();
+      // });
 
       $usernameFake.on('change', function () {
         var enterVal = $usernameFake.val();
