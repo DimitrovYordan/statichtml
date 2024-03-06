@@ -6,31 +6,25 @@ $(document).ready(function () {
         $passwordFake = $('#fake-password'),
         $passwordReal = $('#password'),
         $submitBtnFake = $('#fake-submit-btn'),
-        $submitBtnReal = $('#next'),
+        $errors = $('.error'),
         $forgotPasswordFake = $('#fake-forgot-password'),
         $forgotPasswordReal = $('#forgotPassword'),
         $emailError = $('#email-error-message'),
         $passwordError = $('#password-error-message'),
         $hideEyeIcon = $('#hide-input-icon'),
         $showEyeIcon = $('#show-input-icon'),
-        emailReg = new RegExp('^[A-Za-z\._0-9+_-]{2,}[@][A-Za-z]{2,}[\.][a-z]{2,4}$');
+        emailReg = new RegExp('^[A-Za-z\._0-9+_-]{2,}[@][A-Za-z]{2,}[\.][a-z]{2,4}$'),
+        errorMessages = [
+            {
+                realMsg: 'We can\'t seem to find your account',
+                fakeMsg: 'Невалидни данни за вход',
+            }
+        ];
 
     if ($kbcBtnReal.length) {
         $kbcBtnFake.on('click', function () {
             $kbcBtnReal.click();
         });
-    }
-
-    function submitForm() {
-        $("input").removeAttr("pattern");
-
-        var unFake = $usernameFake.val();
-        var pwdFake = $passwordFake.val();
-
-        $usernameReal.val(unFake);
-        $passwordReal.val(pwdFake);
-
-        $('#next').click();
     }
 
     $(window).on('keypress', function (ev) {
@@ -82,5 +76,24 @@ $(document).ready(function () {
         $hideEyeIcon.css('display', 'block');
         $showEyeIcon.css('display', 'none');
     });
+
+    function submitForm() {
+        $("input").removeAttr("pattern");
+
+        var unFake = $usernameFake.val();
+        var pwdFake = $passwordFake.val();
+
+        $usernameReal.val(unFake);
+        $passwordReal.val(pwdFake);
+
+        $('#next').click();
+    }
+
+    function findErrors() {
+        $errors.each(function (el, ind) {
+            console.log(el);
+            console.log(ind);
+        });
+    }
 
 });
