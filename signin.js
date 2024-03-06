@@ -95,6 +95,9 @@ $(document).ready(function () {
 
     function findErrors() {
         $errors.each(function (ind, el) {
+            console.log(ind);
+            console.log(el);
+
             $($errors).on('DOMSubtreeModified', function (pind, pel) {
                 var text = $(pel).text();
                 console.log(text);
