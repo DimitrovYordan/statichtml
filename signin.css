@@ -60,7 +60,6 @@ h1 {
   margin-left: 20px;
   float: left;
   width: 40px;
-  height: auto;
   filter: brightness(0) saturate(100%) invert(65%) sepia(46%) saturate(6552%) hue-rotate(163deg) brightness(99%) contrast(100%);
 }
 
