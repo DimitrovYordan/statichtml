@@ -95,16 +95,10 @@ $(document).ready(function () {
 
     function findErrors() {
         $errors.each(function (ind, el) {
-            console.log('тук съм');
             $('.error').on('DOMSubtreeModified', function (pind, pel) {
                 $errors.removeAttr("aria-hidden");
-                console.log(ind);
-                console.log(el);
-                console.log(pind);
-                console.log(pel);
                 var text = $(pel).text();
                 console.log(text);
-                console.log('тук съм');
             });
         });
     }
