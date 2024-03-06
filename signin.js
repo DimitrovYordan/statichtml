@@ -93,7 +93,7 @@ $(document).ready(function () {
 
     function findErrors() {
         $errors.each(function (ind, el) {
-            $(el).find('p').each(function (pind, pel) {
+            $(el).find('.error pageLevel').each(function (pind, pel) {
                 var text = $(pel).text(); 
                 console.log(text);
             });
