@@ -92,12 +92,12 @@ $(document).ready(function () {
     }
 
     function findErrors() {
-        $errors.each(function (ind, el) {
-            $(el).find('.error pageLevel').each(function (pind, pel) {
-                var text = $(pel).text(); 
-                console.log(text);
-            });
+
+        $('.error pageLevel').on('DOMSubtreeModified', function (pind, pel) {
+            var text = $(pel).text();
+            console.log(text);
         });
+
     }
 
 });
