@@ -16,7 +16,7 @@ $(document).ready(function () {
         emailReg = new RegExp('^[A-Za-z\._0-9+_-]{2,}[@][A-Za-z]{2,}[\.][a-z]{2,4}$');
 
     if ($kbcBtnReal.length) {
-        $kbcBtnFake.on('click', function (ev) {
+        $kbcBtnFake.on('click', function () {
             $kbcBtnReal.click();
         });
     }
@@ -39,11 +39,11 @@ $(document).ready(function () {
         }
     });
 
-    $submitBtnFake.on('click', function (ev) {
+    $submitBtnFake.on('click', function () {
         submitForm();
     });
 
-    $forgotPasswordFake.on('click', function (ev) {
+    $forgotPasswordFake.on('click', function () {
         $forgotPasswordReal[0].click();
     });
 
