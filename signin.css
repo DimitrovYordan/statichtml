@@ -55,13 +55,13 @@ h1 {
   display: none;
 }
 
-.header a {
+.header a img{
   margin-top: 45px;
   margin-left: 20px;
-  font-size: 30px;
   float: left;
-  font-family: 'Calibri';
-  font-weight: normal;
+  width: 40px;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(65%) sepia(46%) saturate(6552%) hue-rotate(163deg) brightness(99%) contrast(100%);
 }
 
 .clearfix {
