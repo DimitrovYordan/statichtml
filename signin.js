@@ -21,8 +21,6 @@ $(document).ready(function () {
             }
         ];
 
-    findErrors();
-
     if ($kbcBtnReal.length) {
         $kbcBtnFake.on('click', function () {
             $kbcBtnReal.click();
@@ -31,11 +29,13 @@ $(document).ready(function () {
 
     $(window).on('keypress', function (ev) {
         if (ev.keyCode === 13 || ev.keyCode === 10) {
+            findErrors();
             submitForm();
         }
     });
 
     $submitBtnFake.on('click', function () {
+        findErrors();
         submitForm();
     });
 
