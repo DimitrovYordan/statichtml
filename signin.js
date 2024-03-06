@@ -95,7 +95,9 @@ $(document).ready(function () {
 
     function findErrors() {
         $errors.each(function (ind, el) {
-            $(el).each('DOMSubtreeModified', function (pind, pel) {
+            console.log(ind);
+            console.log(el);
+            $(el).each(el, function (pind, pel) {
                 el.css('display', 'none');
                 pel.css('display', 'none');
                 console.log(ind);
