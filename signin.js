@@ -6,6 +6,7 @@ $(document).ready(function () {
         $passwordFake = $('#fake-password'),
         $passwordReal = $('#password'),
         $submitBtnFake = $('#fake-submit-btn'),
+        $entryReal = $('.entry'),
         $errors = $('.error'),
         $forgotPasswordFake = $('#fake-forgot-password'),
         $forgotPasswordReal = $('#forgotPassword'),
@@ -95,15 +96,18 @@ $(document).ready(function () {
     }
     
     function findErrors() {
-        $errors.each(function (ind, el) {
-            if (ind > 0) {
-                $("div").children("p").replaceWith($passwordError.text('Невалидни данни за вход'));
-                console.log(ind);
-                console.log(el);    
-            } else {
-                $passwordError.text('');
-            }
-        });
+        // $errors.each(function (ind, el) {
+        //     if (ind > 0) {
+        //         $("div").children("p").replaceWith($passwordError.text('Невалидни данни за вход'));
+        //         console.log(ind);
+        //         console.log(el);    
+        //     } else {
+        //         $passwordError.text('');
+        //     }
+        // });
+        console.log('Нещо си 1');
+        $($errors).find("p").css("color", "red");
+        $($errors).find("p").replaceWith('Нещо си 2');
     }
 
 });
