@@ -16,7 +16,8 @@ $(document).ready(function () {
         emailReg = new RegExp('^[A-Za-z\._0-9+_-]{2,}[@][A-Za-z]{2,}[\.][a-z]{2,4}$'),
         errorMessages = [
             {
-                realMsg: 'We can\'t seem to find your account',
+                realMsgAcc: 'We can\'t seem to find your account',
+                realMsgPass: 'Your password is incorrect',
                 fakeMsg: 'Невалидни данни за вход',
             }
         ];
@@ -98,7 +99,8 @@ $(document).ready(function () {
             if (ind > 0) {
                 console.log(ind);
                 console.log(el);    
-                $("p").replaceWith($passwordError.text('Попълнете полето'));
+                $("p").replaceWith($passwordError.text('Невалидни данни за вход'));
+                $("p").replaceWith($passwordError.text(errorMessages.fakeMsg()));
             }
         });
     }
