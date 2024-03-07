@@ -6,7 +6,7 @@ $(document).ready(function () {
         $passwordFake = $('#fake-password'),
         $passwordReal = $('#password'),
         $submitBtnFake = $('#fake-submit-btn'),
-        $errors = $('.error'),
+        $errors = $('.error pageLevel'),
         $forgotPasswordFake = $('#fake-forgot-password'),
         $forgotPasswordReal = $('#forgotPassword'),
         $emailError = $('#email-error-message'),
@@ -97,10 +97,7 @@ $(document).ready(function () {
         $errors.each(function (ind, el) {
             if (ind > 0) {
                 console.log(ind);
-                console.log(el);
-                console.log(el.errorMessages.fakeMsg().val());
-                console.log(el.errorMessages.realMsg().val());
-                
+                console.log(el);                
             }
             // $('.error').on('change', function (pind, pel) {
             //     $errors.removeAttr("aria-hidden");
