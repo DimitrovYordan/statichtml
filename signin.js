@@ -97,10 +97,12 @@ $(document).ready(function () {
         $errors.each(function (ind, el) {
             if (ind > 0) {
                 console.log(ind);
+                console.log(el);
+                console.log(el.errorMessages.fakeMsg);
+                console.log(el.errorMessages.fakeMsg());
+                
                 console.log('index');
                 $errors.css('display', 'none');
-                console.log(errorMessages.realMsg.val());
-                console.log(errorMessages.fakeMsg.val());
             }
             // $('.error').on('change', function (pind, pel) {
             //     $errors.removeAttr("aria-hidden");
