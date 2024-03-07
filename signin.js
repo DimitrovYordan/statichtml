@@ -82,11 +82,6 @@ $(document).ready(function () {
         $showEyeIcon.css('display', 'none');
     });
 
-    $.each($passwordFake, function (ind, el) {
-        $("<p>").attr("id", el.errorMessages.fakeMsg()).appendTo($passwordError)
-        console.log('незнам дали ще влезна');
-    });
-    
     function submitForm() {
         $("input").removeAttr("pattern");
         
