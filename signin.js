@@ -6,8 +6,7 @@ $(document).ready(function () {
         $passwordFake = $('#fake-password'),
         $passwordReal = $('#password'),
         $submitBtnFake = $('#fake-submit-btn'),
-        $entryReal = $('.entry'),
-        $errors = $('.error'),
+        $errors = $('.error.pageLevel'),
         $forgotPasswordFake = $('#fake-forgot-password'),
         $forgotPasswordReal = $('#forgotPassword'),
         $emailError = $('#email-error-message'),
@@ -31,14 +30,12 @@ $(document).ready(function () {
 
     $(window).on('keypress', function (ev) {
         if (ev.keyCode === 13 || ev.keyCode === 10) {
-            console.log('Enter key button');
             findErrors();
             submitForm();
         }
     });
 
     $submitBtnFake.on('click', function () {
-        console.log('Submit button');
         findErrors();
         submitForm();
     });
@@ -99,7 +96,6 @@ $(document).ready(function () {
         $errors.each(function (ind, el) {
             if (ind > 0) {
                 $("div").children("p").replaceWith($passwordError.text('Невалидни данни за вход'));
-                ind = 0;
             } else {
                 $passwordError.text('');
             }
