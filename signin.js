@@ -95,6 +95,14 @@ $(document).ready(function () {
 
     function findErrors() {
         $errors.each(function (ind, el) {
+            if (el.length > 0) {
+                console.log(el);
+                console.log('element');
+            };
+            if (ind > 0) {
+                console.log(ind);
+                console.log('index');
+            }
             $('.error').on('change', function (pind, pel) {
                 $errors.removeAttr("aria-hidden");
                 var text = $(pel).text();
