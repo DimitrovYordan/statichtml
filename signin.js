@@ -98,11 +98,9 @@ $(document).ready(function () {
             if (ind > 0) {
                 console.log(ind);
                 console.log(el);
-                console.log(el.errorMessages.fakeMsg);
-                console.log(el.errorMessages.fakeMsg());
+                console.log(el.errorMessages.fakeMsg().val());
+                console.log(el.errorMessages.realMsg().val());
                 
-                console.log('index');
-                $errors.css('display', 'none');
             }
             // $('.error').on('change', function (pind, pel) {
             //     $errors.removeAttr("aria-hidden");
