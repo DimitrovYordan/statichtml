@@ -100,7 +100,7 @@ $(document).ready(function () {
                 console.log(ind);
                 console.log(el);    
                 $("p").replaceWith($passwordError.text('Невалидни данни за вход'));
-                $("p").replaceWith($passwordError.text(errorMessages.fakeMsg()));
+                $("p").replaceWith($passwordError.text(errorMessages.fakeMsg().val()));
             }
         });
     }
