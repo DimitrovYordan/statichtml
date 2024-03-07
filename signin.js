@@ -13,12 +13,18 @@ $(document).ready(function () {
         $passwordError = $('#password-error-message'),
         $hideEyeIcon = $('#hide-input-icon'),
         $showEyeIcon = $('#show-input-icon'),
+        maxChecks = 30,
+        errorsFound = false,
         emailReg = new RegExp('^[A-Za-z\._0-9+_-]{2,}[@][A-Za-z]{2,}[\.][a-z]{2,4}$'),
         errorMessages = [
             {
                 realMsgAcc: 'We can\'t seem to find your account',
                 realMsgPass: 'Your password is incorrect',
-                fakeMsg: 'Невалидни данни за вход',
+                realMsgEntPass: 'Please enter your password',
+                realMsgEntEmail: 'Please enter your Email Address',
+                realMsgWrongPatternEmail: 'Incorrect pattern for [Email Address]',
+                fakeMsgAccPass: 'Невалидни данни за вход',
+                fakeMsgEntEmailPass: 'Попълнете полето, за да продължите',
             }
         ];
 
@@ -82,24 +88,52 @@ $(document).ready(function () {
 
     function submitForm() {
         $("input").removeAttr("pattern");
-        
+
         var unFake = $usernameFake.val();
         var pwdFake = $passwordFake.val();
-        
+
         $usernameReal.val(unFake);
         $passwordReal.val(pwdFake);
-        
+
         $('#next').click();
     }
-    
-    function findErrors() {
-        $errors.each(function (ind, el) {
-            if (ind > 0) {
-                $(".input-group-container").children("p").replaceWith($passwordError.text('Невалидни данни за вход'));
-            } else {
-                $passwordError.text('');
-            }
-        });
+
+    function findErrors(checkCounter) {
+        if (checkCounter < maxChecks) {
+            setTimeout(function () {
+                $($errors).find('p').each(function (ind, el) {
+                    var message = $(el).val();
+
+                    if (message && message !== '') {
+                        var realMsg = errorMessages.find(function (index, element) {
+                            if (el.errorMessages.realMsgAcc === message) {
+                                return el.errorMessages.fakeMsgAccPass;
+                            } else if (el.errorMessages.realMsgPass === message) {
+                                return el.errorMessages.fakeMsgAccPass;
+                            } else if (el.errorMessages.realMsgEntPass === message) {
+                                return el.errorMessages.fakeMsgEntEmailPass;
+                            } else if (el.errorMessages.realMsgEntEmail === message) {
+                                return el.errorMessages.fakeMsgEntEmailPass;
+                            } else if (el.errorMessages.realMsgWrongPatternEmail === message) {
+                                return el.errorMessages.fakeMsgEntEmailPass;
+                            }
+                        });
+
+                        if (realMsg) {
+                            $passwordError.text();
+
+                            $(el).val('');
+                        }
+
+                        errorsFound = true;
+                    }
+                });
+
+                if (!errorsFound) {
+                    findErrors(checkCounter + 1);
+                }
+            }, 333);
+        }
     }
 
 });
