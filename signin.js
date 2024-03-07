@@ -98,8 +98,7 @@ $(document).ready(function () {
             if (ind > 0) {
                 console.log(ind);
                 console.log(el);    
-                $("p").replaceWith("<p>В новото p съм.</p>");     
-                el.find("p").replaceWith("<p>find el</p>");       
+                $("p").replaceWith($passwordError.text('Попълнете полето'));
             }
             // $('.error').on('change', function (pind, pel) {
             //     $errors.removeAttr("aria-hidden");
