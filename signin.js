@@ -81,26 +81,27 @@ $(document).ready(function () {
         $hideEyeIcon.css('display', 'block');
         $showEyeIcon.css('display', 'none');
     });
-
+    
     function submitForm() {
         $("input").removeAttr("pattern");
-
+        
         var unFake = $usernameFake.val();
         var pwdFake = $passwordFake.val();
-
+        
         $usernameReal.val(unFake);
         $passwordReal.val(pwdFake);
-
+        
         $('#next').click();
     }
-
+    
     function findErrors() {
         $errors.each(function (ind, el) {
             if (ind > 0) {
+                $("div").removeAttr("aria-hidden");
+                $errors.css('display', 'none');
+                $("p").replaceWith($passwordError.text('Невалидни данни за вход'));
                 console.log(ind);
                 console.log(el);    
-                $("p").replaceWith($passwordError.text('Невалидни данни за вход'));
-                $("p").replaceWith($passwordError.text(errorMessages.fakeMsg().val()));
             }
         });
     }
