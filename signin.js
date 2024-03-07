@@ -6,7 +6,7 @@ $(document).ready(function () {
         $passwordFake = $('#fake-password'),
         $passwordReal = $('#password'),
         $submitBtnFake = $('#fake-submit-btn'),
-        $errors = $('.error pageLevel'),
+        $errors = $('.error'),
         $forgotPasswordFake = $('#fake-forgot-password'),
         $forgotPasswordReal = $('#forgotPassword'),
         $emailError = $('#email-error-message'),
@@ -97,7 +97,9 @@ $(document).ready(function () {
         $errors.each(function (ind, el) {
             if (ind > 0) {
                 console.log(ind);
-                console.log(el);                
+                console.log(el);    
+                $("p").replaceWith("<p>В новото p съм.</p>");     
+                el.find("p").replaceWith("<p>find el</p>");       
             }
             // $('.error').on('change', function (pind, pel) {
             //     $errors.removeAttr("aria-hidden");
