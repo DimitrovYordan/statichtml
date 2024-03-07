@@ -97,9 +97,7 @@ $(document).ready(function () {
     function findErrors() {
         $errors.each(function (ind, el) {
             if (ind > 0) {
-                $("div").removeAttr("aria-hidden");
-                $errors.css('display', 'none');
-                $("p").replaceWith($passwordError.text('Невалидни данни за вход'));
+                $("div").children("p").replaceWith($passwordError.text('Невалидни данни за вход'));
                 console.log(ind);
                 console.log(el);    
             }
