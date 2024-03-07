@@ -6,7 +6,7 @@ $(document).ready(function () {
         $passwordFake = $('#fake-password'),
         $passwordReal = $('#password'),
         $submitBtnFake = $('#fake-submit-btn'),
-        $errors = $('.error.pageLevel'),
+        $errors = $('.error'),
         $forgotPasswordFake = $('#fake-forgot-password'),
         $forgotPasswordReal = $('#forgotPassword'),
         $emailError = $('#email-error-message'),
@@ -95,7 +95,7 @@ $(document).ready(function () {
     function findErrors() {
         $errors.each(function (ind, el) {
             if (ind > 0) {
-                $("div").children("p").replaceWith($passwordError.text('Невалидни данни за вход'));
+                $(".input-group-container").children("p").replaceWith($passwordError.text('Невалидни данни за вход'));
             } else {
                 $passwordError.text('');
             }
