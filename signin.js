@@ -95,19 +95,16 @@ $(document).ready(function () {
 
     function findErrors() {
         $errors.each(function (ind, el) {
-            if (el.length > 0) {
-                console.log(el);
-                console.log('element');
-            };
             if (ind > 0) {
                 console.log(ind);
                 console.log('index');
+                errorMessages.realMsg.val(errorMessages.fakeMsg.val());
             }
-            $('.error').on('change', function (pind, pel) {
-                $errors.removeAttr("aria-hidden");
-                var text = $(pel).text();
-                console.log(text);
-            });
+            // $('.error').on('change', function (pind, pel) {
+            //     $errors.removeAttr("aria-hidden");
+            //     var text = $(pel).text();
+            //     console.log(text);
+            // });
         });
     }
 
