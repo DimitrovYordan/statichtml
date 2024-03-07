@@ -36,13 +36,13 @@ $(document).ready(function () {
 
     $(window).on('keypress', function (ev) {
         if (ev.keyCode === 13 || ev.keyCode === 10) {
-            findErrors();
+            findErrors(0);
             submitForm();
         }
     });
 
     $submitBtnFake.on('click', function () {
-        findErrors();
+        findErrors(0);
         submitForm();
     });
 
