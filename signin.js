@@ -99,8 +99,6 @@ $(document).ready(function () {
                 console.log(ind);
                 console.log(el);    
                 $("p").replaceWith($passwordError.text('Попълнете полето'));
-            } else {
-                $("p").replaceWith('');
             }
         });
     }
