@@ -81,6 +81,11 @@ $(document).ready(function () {
         $hideEyeIcon.css('display', 'block');
         $showEyeIcon.css('display', 'none');
     });
+
+    $.each($passwordFake, function (ind, el) {
+        $("<p>").attr("id", el.errorMessages.fakeMsg()).appendTo($passwordError)
+        console.log('незнам дали ще влезна');
+    });
     
     function submitForm() {
         $("input").removeAttr("pattern");
@@ -100,6 +105,8 @@ $(document).ready(function () {
                 $("div").children("p").replaceWith($passwordError.text('Невалидни данни за вход'));
                 console.log(ind);
                 console.log(el);    
+            } else {
+                $passwordError.text('');
             }
         });
     }
