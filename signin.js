@@ -139,6 +139,8 @@ $(document).ready(function () {
                             } else if (index[4] === message) {
                                 console.log('5');
                                 return errorMessages.fakeMsgEntEmailPass;
+                            } else {
+                                console.log('6');
                             }
                         });
                         
