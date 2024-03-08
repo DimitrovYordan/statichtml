@@ -113,7 +113,7 @@ $(document).ready(function () {
                             console.log(el);
                             console.log(index);
                             // console.log(realMsg);  // undefined
-                            if (el === index.val()) {
+                            if (el === index) {
                                 console.log('първа проверка');
                                 return el.errorMessages.fakeMsgAccPass;
                             } else if (el.errorMessages.realMsgPass === index) {
