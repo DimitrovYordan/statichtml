@@ -147,7 +147,7 @@ $(document).ready(function () {
                             console.log('след проверките');
                             console.log(index);
                             console.log(index.fakeMsg);
-                            $passwordError.text(index);
+                            $passwordError.text(index.fakeMsg);
 
                             $(el).val('');
                         }
