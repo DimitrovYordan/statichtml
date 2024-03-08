@@ -106,12 +106,14 @@ $(document).ready(function () {
                     // console.log(message);
                     
                     if (el && el !== '') {
-                        console.log('2ви if');
                         var realMsg = errorMessages.find(function (index, element) {
                             // index - идва масива съобщения на англ.
                             // el - идва real съобщението
                             console.log(el);
                             console.log(index);
+                            console.log(index[0]);
+                            console.log(index[1]);
+                            console.log(index[2]);
                             // console.log(realMsg);  // undefined
                             if (el === index[0]) {
                                 console.log('1');
