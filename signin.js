@@ -113,25 +113,33 @@ $(document).ready(function () {
         if (checkCounter < maxChecks) {
             setTimeout(function () {
                 $($errors).find('p').each(function (ind, el) {
-                    var message = $(el).html();
+                    var message = $(el).html().trim();
+                    console.log('Counter: ' + checkCounter);
                     
                     if (message && message !== '') {
                         console.log('2ви if');
                         var realMsg = errorMessages.find(function (index, element) {
                             // index - идва нашия масив.
                             // el - идва real съобщението
-                            console.log(el);
-                            console.log(index);
                             if (index.realMsg === message) {
                                 return index.fakeMsg;
                             }
                         });
                         
                         if (realMsg) {
-                            console.log('след проверките');
-                            $passwordError.text(realMsg.fakeMsg);
+                            var currentHTML = $passwordError.html();
                             
-                            $(el).val('');
+                            var currentText = $passwordError.text();
+                            
+                            currentHTML += realMsg.fakeMsg + '\n';
+                            currentText += realMsg.fakeMsg + '\n';
+                            
+                            console.log(currentHTML);
+                            console.log(currentText);
+
+                            $passwordError.text(currentHTML);
+                            
+                            $(el).html('');
                             console.log(el);
                         }
                         
