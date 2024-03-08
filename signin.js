@@ -111,7 +111,6 @@ $(document).ready(function () {
                             // index - идва масива съобщения на англ.
                             console.log(index);
                             console.log(element);
-                            console.log(el.errorMessages.realMsgAcc);
                             console.log(realMsg);  // undefined
                             if (el.errorMessages.realMsgAcc === index.val()) {
                                 console.log('първа проверка');
