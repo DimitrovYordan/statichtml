@@ -109,6 +109,8 @@ $(document).ready(function () {
                         console.log('2ви if');
                         var realMsg = errorMessages.find(function (index, element) {
                             // index - идва масива съобщения на англ.
+                            console.log(el);
+                            console.log(ind);
                             console.log(index);
                             console.log(element);
                             console.log(realMsg);  // undefined
