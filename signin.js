@@ -18,7 +18,7 @@ $(document).ready(function () {
         emailReg = new RegExp('^[A-Za-z\._0-9+_-]{2,}[@][A-Za-z]{2,}[\.][a-z]{2,4}$'),
         errorMessages = [
             {
-                realMsgAcc: 'We can\'t seem to find your account',
+                realMsgAcc: "We can't seem to find your account",
                 realMsgPass: 'Your password is incorrect',
                 realMsgEntPass: 'Please enter your password',
                 realMsgEntEmail: 'Please enter your Email Address',
