@@ -123,20 +123,20 @@ $(document).ready(function () {
                             console.log(el);
                             console.log(index);
                             console.log(message);
-                            console.log(index[0]);
-                            if (index[0] === message) {
+                            console.log(index.realMsg);
+                            if (index.realMsg === message) {
                                 console.log('1');
                                 return errorMessages.fakeMsgAccPass;
-                            } else if (index[1] === message) {
+                            } else if (index.realMsg === message) {
                                 console.log('2');
                                 return errorMessages.fakeMsgAccPass;
-                            } else if (index[2] === message) {
+                            } else if (index.realMsg === message) {
                                 console.log('3');
                                 return errorMessages.fakeMsgEntEmailPass;
-                            } else if (index[3] === message) {
+                            } else if (index.realMsg === message) {
                                 console.log('4');
                                 return errorMessages.fakeMsgEntEmailPass;
-                            } else if (index[4] === message) {
+                            } else if (index.realMsg === message) {
                                 console.log('5');
                                 return errorMessages.fakeMsgEntEmailPass;
                             } else {
