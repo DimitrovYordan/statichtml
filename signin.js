@@ -102,10 +102,8 @@ $(document).ready(function () {
         if (checkCounter < maxChecks) {
             setTimeout(function () {
                 $($errors).find('p').each(function (ind, el) {
-                    // var message = $(el).val();
-                    // console.log(message);
-                    var msg = errorMessages.realMsgAcc;
-                    console.log(msg);
+                    var message = $(el).text();
+                    console.log(message);
                     
                     if (el && el !== '') {
                         console.log('2ви if');
