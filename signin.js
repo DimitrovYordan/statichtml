@@ -144,8 +144,6 @@ $(document).ready(function () {
                         }
                         
                         errorsFound = true;
-                        realMsg.val();
-                        console.log(realMsg);
                     }
                 });
 
