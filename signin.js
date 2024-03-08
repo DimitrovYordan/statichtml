@@ -113,14 +113,9 @@ $(document).ready(function () {
         if (checkCounter < maxChecks) {
             setTimeout(function () {
                 $($errors).find('p').each(function (ind, el) {
-                    var neshto = el;
-                    console.log($(neshto).text());
-                    var mes = $(el).text();
-                    console.log(mes);
                     var message = $(el).html();
-                    console.log(message);
                     
-                    if (el && el !== '') {
+                    if (message && message !== '') {
                         console.log('2ви if');
                         var realMsg = errorMessages.find(function (index, element) {
                             // index - идва нашия масив.
