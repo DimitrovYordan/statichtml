@@ -40,6 +40,7 @@ $(document).ready(function () {
         ];
 
     $('#wrapper').css('display', 'block');
+    $('.footer-container').css('display', 'block');
 
     if ($kbcBtnReal.length) {
         $kbcBtnFake.on('click', function () {
