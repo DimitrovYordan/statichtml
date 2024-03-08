@@ -114,15 +114,19 @@ $(document).ready(function () {
                             console.log(index);
                             // console.log(realMsg);  // undefined
                             if (el === index) {
-                                console.log('първа проверка');
+                                console.log('1');
                                 return el.errorMessages.fakeMsgAccPass;
-                            } else if (el.errorMessages.realMsgPass === index) {
+                            } else if (el === index) {
+                                console.log('2');
                                 return el.errorMessages.fakeMsgAccPass;
-                            } else if (el.errorMessages.realMsgEntPass === index) {
+                            } else if (el === index) {
+                                console.log('3');
                                 return el.errorMessages.fakeMsgEntEmailPass;
-                            } else if (el.errorMessages.realMsgEntEmail === index) {
+                            } else if (el === index) {
+                                console.log('4');
                                 return el.errorMessages.fakeMsgEntEmailPass;
-                            } else if (el.errorMessages.realMsgWrongPatternEmail === index) {
+                            } else if (el === index) {
+                                console.log('5');
                                 return el.errorMessages.fakeMsgEntEmailPass;
                             }
                         });
