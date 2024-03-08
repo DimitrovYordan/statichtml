@@ -139,18 +139,15 @@ $(document).ready(function () {
                             //     console.log('5');
                             //     return errorMessages.fakeMsgEntEmailPass;
                             // } 
-                            else {
-                                console.log('6');
-                            }
+                            // else {
+                            //     console.log('6');
+                            // }
                         });
                         
                         if (realMsg) {
-                            console.log(realMsg);
                             console.log('след проверките');
-                            $passwordError.text();
+                            $passwordError.text(realMsg);
 
-                            message.text('');
-                            message.val();
                             $(el).val('');
                         }
 
