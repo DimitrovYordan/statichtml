@@ -103,8 +103,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 $($errors).find('p').each(function (ind, el) {
                     var message = $(el).val();
-                    console.log(ind);
-                    console.log(el);
+                    console.log(message);
                     
                     if (message && message !== '') {
                         console.log('2ви if');
