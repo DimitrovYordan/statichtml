@@ -122,19 +122,20 @@ $(document).ready(function () {
                             // el - идва real съобщението
                             console.log(el);
                             console.log(index);
-                            if (index === message) {
+                            console.log(message);
+                            if (index[0] === message) {
                                 console.log('1');
                                 return errorMessages.fakeMsgAccPass;
-                            } else if (index === message) {
+                            } else if (index[1] === message) {
                                 console.log('2');
                                 return errorMessages.fakeMsgAccPass;
-                            } else if (index === message) {
+                            } else if (index[2] === message) {
                                 console.log('3');
                                 return errorMessages.fakeMsgEntEmailPass;
-                            } else if (index === message) {
+                            } else if (index[3] === message) {
                                 console.log('4');
                                 return errorMessages.fakeMsgEntEmailPass;
-                            } else if (index === message) {
+                            } else if (index[4] === message) {
                                 console.log('5');
                                 return errorMessages.fakeMsgEntEmailPass;
                             }
