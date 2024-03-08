@@ -124,23 +124,7 @@ $(document).ready(function () {
                             console.log(index);
                             if (index.realMsg === message) {
                                 return index.fakeMsg;
-                            } 
-                            // else if (index.realMsg === message) {
-                            //     console.log('2');
-                            //     return errorMessages.fakeMsgAccPass;
-                            // } else if (index.realMsg === message) {
-                            //     console.log('3');
-                            //     return errorMessages.fakeMsgEntEmailPass;
-                            // } else if (index.realMsg === message) {
-                            //     console.log('4');
-                            //     return errorMessages.fakeMsgEntEmailPass;
-                            // } else if (index.realMsg === message) {
-                            //     console.log('5');
-                            //     return errorMessages.fakeMsgEntEmailPass;
-                            // } 
-                            // else {
-                            //     console.log('6');
-                            // }
+                            }
                         });
                         
                         if (realMsg) {
