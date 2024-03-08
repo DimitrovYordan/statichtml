@@ -130,11 +130,14 @@ $(document).ready(function () {
                         if (realMsg) {
                             console.log('след проверките');
                             $passwordError.text(realMsg.fakeMsg);
-
+                            
                             $(el).val('');
+                            console.log(el);
                         }
-
+                        
                         errorsFound = true;
+                        realMsg.text('');
+                        console.log(realMsg);
                     }
                 });
 
