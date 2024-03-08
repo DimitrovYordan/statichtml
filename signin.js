@@ -113,19 +113,19 @@ $(document).ready(function () {
                             console.log(el);
                             console.log(index);
                             // console.log(realMsg);  // undefined
-                            if (el === index) {
+                            if (el === index[0]) {
                                 console.log('1');
                                 return el.errorMessages.fakeMsgAccPass;
-                            } else if (el === index) {
+                            } else if (el === index[1]) {
                                 console.log('2');
                                 return el.errorMessages.fakeMsgAccPass;
-                            } else if (el === index) {
+                            } else if (el === index[2]) {
                                 console.log('3');
                                 return el.errorMessages.fakeMsgEntEmailPass;
-                            } else if (el === index) {
+                            } else if (el === index[3]) {
                                 console.log('4');
                                 return el.errorMessages.fakeMsgEntEmailPass;
-                            } else if (el === index) {
+                            } else if (el === index[4]) {
                                 console.log('5');
                                 return el.errorMessages.fakeMsgEntEmailPass;
                             }
