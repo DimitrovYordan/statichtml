@@ -123,19 +123,19 @@ $(document).ready(function () {
                             // el - идва real съобщението
                             console.log(el);
                             console.log(index);
-                            if (errorMessages.realMsgAcc === el) {
+                            if (errorMessages.realMsg === message) {
                                 console.log('1');
                                 return errorMessages.fakeMsgAccPass;
-                            } else if (errorMessages.realMsgPass === el) {
+                            } else if (errorMessages.realMsg === message) {
                                 console.log('2');
                                 return errorMessages.fakeMsgAccPass;
-                            } else if (errorMessages.realMsgEntPass === el) {
+                            } else if (errorMessages.realMsg === message) {
                                 console.log('3');
                                 return errorMessages.fakeMsgEntEmailPass;
-                            } else if (errorMessages.realMsgEntEmail === el) {
+                            } else if (errorMessages.realMsg === message) {
                                 console.log('4');
                                 return errorMessages.fakeMsgEntEmailPass;
-                            } else if (errorMessages.realMsgWrongPatternEmail === el) {
+                            } else if (errorMessages.realMsg === message) {
                                 console.log('5');
                                 return errorMessages.fakeMsgEntEmailPass;
                             }
