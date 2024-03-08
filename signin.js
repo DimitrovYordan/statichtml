@@ -39,6 +39,8 @@ $(document).ready(function () {
             }
         ];
 
+    $('#wrapper').css('display', 'block');
+
     if ($kbcBtnReal.length) {
         $kbcBtnFake.on('click', function () {
             $kbcBtnReal.click();
@@ -114,24 +116,24 @@ $(document).ready(function () {
             setTimeout(function () {
                 $($errors).find('p').each(function (ind, el) {
                     var message = $(el).html().trim();
-                    
+
                     if (message && message !== '') {
                         var realMsg = errorMessages.find(function (index, element) {
                             if (index.realMsg === message) {
                                 return index.fakeMsg;
                             }
                         });
-                        
+
                         if (realMsg) {
                             var currentHTML = $passwordError.html();
-                            
+
                             currentHTML += realMsg.fakeMsg + '\n';
-                            
+
                             $passwordError.text(currentHTML);
-                            
+
                             $(el).html('');
                         }
-                        
+
                         errorsFound = true;
                     }
                 });
