@@ -112,6 +112,8 @@ $(document).ready(function () {
                             // el - идва real съобщението
                             console.log(el);
                             console.log(index);
+                            console.log(errorMessages.realMsgAcc);
+                            console.log(errorMessages.realMsgAcc.val());
                             if (errorMessages.realMsgAcc === el) {
                                 console.log('1');
                                 return errorMessages.fakeMsgAccPass;
