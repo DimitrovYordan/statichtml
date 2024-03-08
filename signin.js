@@ -123,7 +123,7 @@ $(document).ready(function () {
                             console.log(el);
                             console.log(index);
                             if (index.realMsg === message) {
-                                return index = index.fakeMsg;
+                                return index.fakeMsg;
                             } 
                             // else if (index.realMsg === message) {
                             //     console.log('2');
@@ -145,6 +145,8 @@ $(document).ready(function () {
                         
                         if (realMsg) {
                             console.log('след проверките');
+                            console.log(index);
+                            console.log(index.fakeMsg);
                             $passwordError.text(index);
 
                             $(el).val('');
