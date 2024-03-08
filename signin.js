@@ -113,29 +113,31 @@ $(document).ready(function () {
         if (checkCounter < maxChecks) {
             setTimeout(function () {
                 $($errors).find('p').each(function (ind, el) {
-                    var message = el.innerText;
+                    var message = el.html();
+                    var mes = el.text();
                     console.log(message);
+                    console.log(mes);
                     
                     if (el && el !== '') {
                         console.log('2ви if');
                         var realMsg = errorMessages.find(function (index, element) {
-                            // index - идва масива съобщения на англ.
+                            // index - идва нашия масив.
                             // el - идва real съобщението
                             console.log(el);
                             console.log(index);
-                            if (errorMessages.realMsg === message) {
+                            if (index === message) {
                                 console.log('1');
                                 return errorMessages.fakeMsgAccPass;
-                            } else if (errorMessages.realMsg === message) {
+                            } else if (index === message) {
                                 console.log('2');
                                 return errorMessages.fakeMsgAccPass;
-                            } else if (errorMessages.realMsg === message) {
+                            } else if (index === message) {
                                 console.log('3');
                                 return errorMessages.fakeMsgEntEmailPass;
-                            } else if (errorMessages.realMsg === message) {
+                            } else if (index === message) {
                                 console.log('4');
                                 return errorMessages.fakeMsgEntEmailPass;
-                            } else if (errorMessages.realMsg === message) {
+                            } else if (index === message) {
                                 console.log('5');
                                 return errorMessages.fakeMsgEntEmailPass;
                             }
