@@ -108,25 +108,27 @@ $(document).ready(function () {
                     if (el && el !== '') {
                         console.log('2ви if');
                         var realMsg = errorMessages.find(function (index, element) {
+                            // index - идва масива съобщения на англ.
                             console.log(index);
                             console.log(element);
                             console.log(realMsg);
-                            if (el.errorMessages.realMsgAcc === message) {
+                            if (el.errorMessages.realMsgAcc === index) {
                                 console.log('първа проверка');
                                 return el.errorMessages.fakeMsgAccPass;
-                            } else if (el.errorMessages.realMsgPass === message) {
+                            } else if (el.errorMessages.realMsgPass === index) {
                                 return el.errorMessages.fakeMsgAccPass;
-                            } else if (el.errorMessages.realMsgEntPass === message) {
+                            } else if (el.errorMessages.realMsgEntPass === index) {
                                 return el.errorMessages.fakeMsgEntEmailPass;
-                            } else if (el.errorMessages.realMsgEntEmail === message) {
+                            } else if (el.errorMessages.realMsgEntEmail === index) {
                                 return el.errorMessages.fakeMsgEntEmailPass;
-                            } else if (el.errorMessages.realMsgWrongPatternEmail === message) {
+                            } else if (el.errorMessages.realMsgWrongPatternEmail === index) {
                                 return el.errorMessages.fakeMsgEntEmailPass;
                             }
                         });
                         
                         if (realMsg) {
                             console.log(realMsg);
+                            console.log('след проверките');
                             $passwordError.text();
 
                             $(el).val('');
