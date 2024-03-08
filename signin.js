@@ -136,7 +136,7 @@ $(document).ready(function () {
                         }
                         
                         errorsFound = true;
-                        realMsg.text('');
+                        realMsg.val();
                         console.log(realMsg);
                     }
                 });
