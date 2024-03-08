@@ -111,13 +111,12 @@ $(document).ready(function () {
 
     function findErrors(checkCounter) {
         if (checkCounter < maxChecks) {
+            console.log('Counter: ' + checkCounter);
             setTimeout(function () {
                 $($errors).find('p').each(function (ind, el) {
                     var message = $(el).html().trim();
-                    console.log('Counter: ' + checkCounter);
                     
                     if (message && message !== '') {
-                        console.log('2ви if');
                         var realMsg = errorMessages.find(function (index, element) {
                             // index - идва нашия масив.
                             // el - идва real съобщението
@@ -129,21 +128,14 @@ $(document).ready(function () {
                         if (realMsg) {
                             var currentHTML = $passwordError.html();
                             
-                            var currentText = $passwordError.text();
-                            
                             currentHTML += realMsg.fakeMsg + '\n';
-                            currentText += realMsg.fakeMsg + '\n';
                             
-                            console.log(currentHTML);
-                            console.log(currentText);
-
                             $passwordError.text(currentHTML);
                             
                             $(el).html('');
-                            console.log(el);
                         }
                         
-                        errorsFound = true;
+                        // errorsFound = true;
                     }
                 });
 
