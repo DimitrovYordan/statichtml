@@ -102,14 +102,15 @@ $(document).ready(function () {
         if (checkCounter < maxChecks) {
             setTimeout(function () {
                 $($errors).find('p').each(function (ind, el) {
-                    var message = $(el).val();
-                    console.log(message);
+                    // var message = $(el).val();
+                    // console.log(message);
                     
-                    if (message && message !== '') {
+                    if (el && el !== '') {
                         console.log('2ви if');
                         var realMsg = errorMessages.find(function (index, element) {
                             console.log(index);
                             console.log(element);
+                            console.log(realMsg);
                             if (el.errorMessages.realMsgAcc === message) {
                                 console.log('първа проверка');
                                 return el.errorMessages.fakeMsgAccPass;
