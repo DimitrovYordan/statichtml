@@ -105,7 +105,7 @@ $(document).ready(function () {
                     // var message = $(el).val();
                     // console.log(message);
                     var msg = errorMessages.realMsgAcc;
-                    var msgsss = errorMessages.realMsgAcc.val();
+                    console.log(msg);
                     
                     if (el && el !== '') {
                         console.log('2ви if');
@@ -114,8 +114,6 @@ $(document).ready(function () {
                             // el - идва real съобщението
                             console.log(el);
                             console.log(index);
-                            console.log(msg);
-                            console.log(msgsss);
                             if (errorMessages.realMsgAcc === el) {
                                 console.log('1');
                                 return errorMessages.fakeMsgAccPass;
