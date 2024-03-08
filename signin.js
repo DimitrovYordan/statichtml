@@ -109,12 +109,11 @@ $(document).ready(function () {
                         console.log('2ви if');
                         var realMsg = errorMessages.find(function (index, element) {
                             // index - идва масива съобщения на англ.
+                            // el - идва real съобщението
                             console.log(el);
-                            console.log(ind);
                             console.log(index);
-                            console.log(element);
-                            console.log(realMsg);  // undefined
-                            if (el.errorMessages.realMsgAcc.val() === index.val()) {
+                            // console.log(realMsg);  // undefined
+                            if (el === index.val()) {
                                 console.log('първа проверка');
                                 return el.errorMessages.fakeMsgAccPass;
                             } else if (el.errorMessages.realMsgPass === index) {
