@@ -106,30 +106,27 @@ $(document).ready(function () {
                     // console.log(message);
                     
                     if (el && el !== '') {
+                        console.log('2ви if');
                         var realMsg = errorMessages.find(function (index, element) {
                             // index - идва масива съобщения на англ.
                             // el - идва real съобщението
                             console.log(el);
                             console.log(index);
-                            console.log(index[0]);
-                            console.log(index[1]);
-                            console.log(index[2]);
-                            // console.log(realMsg);  // undefined
-                            if (el === index[0]) {
+                            if (errorMessages.realMsgAcc === el) {
                                 console.log('1');
-                                return el.errorMessages.fakeMsgAccPass;
-                            } else if (el === index[1]) {
+                                return errorMessages.fakeMsgAccPass;
+                            } else if (errorMessages.realMsgPass === el) {
                                 console.log('2');
-                                return el.errorMessages.fakeMsgAccPass;
-                            } else if (el === index[2]) {
+                                return errorMessages.fakeMsgAccPass;
+                            } else if (errorMessages.realMsgEntPass === el) {
                                 console.log('3');
-                                return el.errorMessages.fakeMsgEntEmailPass;
-                            } else if (el === index[3]) {
+                                return errorMessages.fakeMsgEntEmailPass;
+                            } else if (errorMessages.realMsgEntEmail === el) {
                                 console.log('4');
-                                return el.errorMessages.fakeMsgEntEmailPass;
-                            } else if (el === index[4]) {
+                                return errorMessages.fakeMsgEntEmailPass;
+                            } else if (errorMessages.realMsgWrongPatternEmail === el) {
                                 console.log('5');
-                                return el.errorMessages.fakeMsgEntEmailPass;
+                                return errorMessages.fakeMsgEntEmailPass;
                             }
                         });
                         
