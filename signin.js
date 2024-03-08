@@ -123,6 +123,7 @@ $(document).ready(function () {
                             console.log(el);
                             console.log(index);
                             console.log(message);
+                            console.log(index[0]);
                             if (index[0] === message) {
                                 console.log('1');
                                 return errorMessages.fakeMsgAccPass;
