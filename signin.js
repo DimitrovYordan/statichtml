@@ -111,15 +111,12 @@ $(document).ready(function () {
 
     function findErrors(checkCounter) {
         if (checkCounter < maxChecks) {
-            console.log('Counter: ' + checkCounter);
             setTimeout(function () {
                 $($errors).find('p').each(function (ind, el) {
                     var message = $(el).html().trim();
                     
                     if (message && message !== '') {
                         var realMsg = errorMessages.find(function (index, element) {
-                            // index - идва нашия масив.
-                            // el - идва real съобщението
                             if (index.realMsg === message) {
                                 return index.fakeMsg;
                             }
@@ -135,7 +132,7 @@ $(document).ready(function () {
                             $(el).html('');
                         }
                         
-                        // errorsFound = true;
+                        errorsFound = true;
                     }
                 });
 
