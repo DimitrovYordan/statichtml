@@ -122,24 +122,24 @@ $(document).ready(function () {
                             // el - идва real съобщението
                             console.log(el);
                             console.log(index);
-                            console.log(message);
-                            console.log(index.realMsg);
                             if (index.realMsg === message) {
                                 console.log('1');
-                                return errorMessages.fakeMsgAccPass;
-                            } else if (index.realMsg === message) {
-                                console.log('2');
-                                return errorMessages.fakeMsgAccPass;
-                            } else if (index.realMsg === message) {
-                                console.log('3');
-                                return errorMessages.fakeMsgEntEmailPass;
-                            } else if (index.realMsg === message) {
-                                console.log('4');
-                                return errorMessages.fakeMsgEntEmailPass;
-                            } else if (index.realMsg === message) {
-                                console.log('5');
-                                return errorMessages.fakeMsgEntEmailPass;
-                            } else {
+                                return index = index.fakeMsg;
+                            } 
+                            // else if (index.realMsg === message) {
+                            //     console.log('2');
+                            //     return errorMessages.fakeMsgAccPass;
+                            // } else if (index.realMsg === message) {
+                            //     console.log('3');
+                            //     return errorMessages.fakeMsgEntEmailPass;
+                            // } else if (index.realMsg === message) {
+                            //     console.log('4');
+                            //     return errorMessages.fakeMsgEntEmailPass;
+                            // } else if (index.realMsg === message) {
+                            //     console.log('5');
+                            //     return errorMessages.fakeMsgEntEmailPass;
+                            // } 
+                            else {
                                 console.log('6');
                             }
                         });
@@ -149,6 +149,8 @@ $(document).ready(function () {
                             console.log('след проверките');
                             $passwordError.text();
 
+                            message.text('');
+                            message.val();
                             $(el).val('');
                         }
 
