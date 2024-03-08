@@ -113,6 +113,8 @@ $(document).ready(function () {
         if (checkCounter < maxChecks) {
             setTimeout(function () {
                 $($errors).find('p').each(function (ind, el) {
+                    var neshto = el;
+                    console.log($(neshto).text());
                     var mes = $(el).text();
                     console.log(mes);
                     var message = $(el).html();
