@@ -18,13 +18,24 @@ $(document).ready(function () {
         emailReg = new RegExp('^[A-Za-z\._0-9+_-]{2,}[@][A-Za-z]{2,}[\.][a-z]{2,4}$'),
         errorMessages = [
             {
-                realMsgAcc: "We can't seem to find your account",
-                realMsgPass: 'Your password is incorrect',
-                realMsgEntPass: 'Please enter your password',
-                realMsgEntEmail: 'Please enter your Email Address',
-                realMsgWrongPatternEmail: 'Incorrect pattern for [Email Address]',
-                fakeMsgAccPass: 'Невалидни данни за вход',
-                fakeMsgEntEmailPass: 'Попълнете полето, за да продължите',
+                realMsg: "Incorrect pattern for [Email Address]",
+                fakeMsg: 'Невалидни данни за вход',
+            },
+            {
+                realMsg: "We can't seem to find your account",
+                fakeMsg: 'Невалидни данни за вход'
+            },
+            {
+                realMsg: "Your password is incorrect'",
+                fakeMsg: 'Невалидни данни за вход'
+            },
+            {
+                realMsg: "Please enter your password",
+                fakeMsg: 'Попълнете полето, за да продължите'
+            },
+            {
+                realMsg: "Please enter your Email Address",
+                fakeMsg: 'Попълнете полето, за да продължите'
             }
         ];
 
