@@ -100,12 +100,11 @@ $(document).ready(function () {
 
     function findErrors(checkCounter) {
         if (checkCounter < maxChecks) {
-            console.log('1ви if');
             setTimeout(function () {
                 $($errors).find('p').each(function (ind, el) {
                     var message = $(el).val();
-                    console.log('find function');
-                    console.log(message);
+                    console.log(ind);
+                    console.log(el);
                     
                     if (message && message !== '') {
                         console.log('2ви if');
@@ -116,16 +115,12 @@ $(document).ready(function () {
                                 console.log('първа проверка');
                                 return el.errorMessages.fakeMsgAccPass;
                             } else if (el.errorMessages.realMsgPass === message) {
-                                console.log('преди някой');
                                 return el.errorMessages.fakeMsgAccPass;
                             } else if (el.errorMessages.realMsgEntPass === message) {
-                                console.log('някой там');
                                 return el.errorMessages.fakeMsgEntEmailPass;
                             } else if (el.errorMessages.realMsgEntEmail === message) {
-                                console.log('пред последен');
                                 return el.errorMessages.fakeMsgEntEmailPass;
                             } else if (el.errorMessages.realMsgWrongPatternEmail === message) {
-                                console.log('последен');
                                 return el.errorMessages.fakeMsgEntEmailPass;
                             }
                         });
