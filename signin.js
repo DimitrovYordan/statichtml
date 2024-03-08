@@ -113,9 +113,9 @@ $(document).ready(function () {
         if (checkCounter < maxChecks) {
             setTimeout(function () {
                 $($errors).find('p').each(function (ind, el) {
-                    var mes = el.text();
+                    var mes = $(el).text();
                     console.log(mes);
-                    var message = el.html;
+                    var message = $(el).html();
                     console.log(message);
                     
                     if (el && el !== '') {
