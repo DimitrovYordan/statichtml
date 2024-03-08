@@ -102,7 +102,7 @@ $(document).ready(function () {
         if (checkCounter < maxChecks) {
             setTimeout(function () {
                 $($errors).find('p').each(function (ind, el) {
-                    var message = $(el).text();
+                    var message = el.innerText;
                     console.log(message);
                     
                     if (el && el !== '') {
